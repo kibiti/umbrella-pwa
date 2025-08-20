@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elimuhub • Do I need an umbrella?</title>
+
+  <!-- PWA: manifest + theme -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#D32F2F" />
+
+  <!-- iOS PWA helpers (optional but nice) -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="icon" href="images/icons-192.png" />
+  <link rel="apple-touch-icon" href="images/icons-192.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>Elimuhub Weather</h1>
+    </div>
+    <p class="tagline">Do I need an umbrella?</p>
+  </header>
+
+  <main class="container">
+    <div id="status" class="status">Detecting location…</div>
+
+    <div class="card result">
+      <div id="bigAnswer" class="answer">—</div>
+      <div id="subAnswer" class="subanswer">—</div>
+      <div id="dayLabel" class="day-label">Today</div>
+    </div>
+
+    <div class="card details" id="details" hidden>
+      <ul>
+        <li><strong>Max rain probability:</strong> <span id="prob">—</span>%</li>
+        <li><strong>Total rain (24h):</strong> <span id="sum">—</span> mm</li>
+        <li><strong>Location:</strong> <span id="place">—</span></li>
+        <li><strong>Updated:</strong> <span id="updated">—</span></li>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <button id="todayBtn" class="btn btn-outline">Today</button>
+      <button id="tomorrowBtn" class="btn btn-outline">Tomorrow</button>
+      <button id="refreshBtn" class="btn">Refresh</button>
+    </div>
+
+    <section class="cta card">
+      <h2>Need a tutor during rainy days?</h2>
+      <p>We offer flexible home & after-school tutoring across Nairobi.</p>
+      <div class="cta-actions">
+        <a class="btn" href="https://elimuhub.com" target="_blank" rel="noopener">Book a Tutor</a>
+        <a class="btn btn-outline" href="tel:+254722481414">Call</a>
+        <a class="btn btn-outline" href="https://wa.me/254722481414?text=Hello%20Elimuhub%2C%20I%20saw%20the%20umbrella%20app%20and%20would%20like%20to%20book%20tuition." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> Elimuhub Education Consultants • Nairobi, Kenya</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+      </html>
